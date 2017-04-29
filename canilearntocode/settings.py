@@ -85,6 +85,9 @@ from django.utils.translation import ugettext_lazy as _
 # INSTALLED_APPS setting.
 USE_MODELTRANSLATION = False
 
+# Add mezzanine-mdown editor for markdown support and code highlighting
+RICHTEXT_WIDGET_CLASS = 'mdown.forms.WmdWidget'
+RICHTEXT_FILTERS = ('mezzanine.utils.html.thumbnails', 'mdown.filters.codehilite')
 
 ########################
 # MAIN DJANGO SETTINGS #
@@ -249,6 +252,8 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     # "mezzanine.accounts",
     # "mezzanine.mobile",
+    "mdown",
+    "canilearntocode.common",
 )
 
 # List of middleware classes to use. Order is important; in the request phase,
