@@ -2,16 +2,16 @@
 {% load i18n %}
 
 {% block meta_title %}{% trans "Home" %}{% endblock %}
-{% block title %}{% trans "Home" %}{% endblock %}
+{% block title %}<h1>Can I Learn to Code?</h1>{% endblock %}
 
 {% block breadcrumb_menu %}
-<li class="active">{% trans "Home" %}</li>
+    <li class="active">{% trans "Home" %}</li>
 {% endblock %}
 
 {% block main %}
 {% blocktrans %}
 <h2>Welcome to canilearntocode.com!</h2>
-<hr>
+<br>
 <p>
     The answer is yes, by the way. Now more than ever, if you have the drive and determination, no matter who you are,
     no matter where you're from, you can learn to write source code, build websites and develop software applications.
@@ -22,7 +22,7 @@
     hope you find it useful.
 </p>
 <h3>How to use this site:</h3>
-<hr>
+<br>
 <p>
     The <a href="/curriculum/">curriculum</a> section provides a curated list of learning resources, for various topics in web development,
     software engineering and computer science. These books, courses and videos will help you go from total beginner
@@ -42,3 +42,5 @@
 </p>
 {% endblocktrans %}
 {% endblock %}
+
+{% block right_panel %}{% endblock %}
