@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Curriculum, Resource
+
+
+class CurriculumAdmin(admin.ModelAdmin):
+    prepopulated_fields = {"slug": ("subject",)}
+
+admin.site.register(Curriculum, CurriculumAdmin)
+admin.site.register(Resource)
