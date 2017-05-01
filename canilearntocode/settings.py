@@ -254,6 +254,7 @@ INSTALLED_APPS = (
     # "mezzanine.mobile",
     "mdown",
     "canilearntocode.common",
+    "canilearntocode.curriculum",
 )
 
 # List of middleware classes to use. Order is important; in the request phase,
