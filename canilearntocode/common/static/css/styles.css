@@ -97,3 +97,8 @@ body {
     border-bottom: 1px solid #ccc;
 }
 
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+}
