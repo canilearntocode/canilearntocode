@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
 <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
 <link rel="stylesheet" href="{% static "css/bootstrap-theme.css" %}">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 <link rel="stylesheet" type="text/css" href="{% static 'css/default.css' %}">
 {% if LANGUAGE_BIDI %}
@@ -52,7 +53,7 @@
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 <div class="container">
-<div class="navbar-header">
+<div class="navbar-header navbar-inverse">
     <a href="/"><img src="{% static 'images/computer_icon.png' %}" height="100px"></a>
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">{% trans "Toggle Navigation" %}</span>
@@ -90,39 +91,41 @@
 {% endnevercache %}
 
 <h1>{% block title %}{% endblock %}</h1>
-<hr>
-{#<ul class="breadcrumb">#}
-{#{% spaceless %}#}
-{#{% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}#}
-{#{% endspaceless %}#}
-{#</ul>#}
+
+<ul class="breadcrumb">
+{% spaceless %}
+{% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
+{% endspaceless %}
+</ul>
 
 </div>
 
 <div class="container">
 <div class="row">
 
-<div class="col-md-2 left">
-    {% block left_panel %}
-    <div class="panel panel-default tree">{% page_menu "pages/menus/tree.html" %}</div>
-    {% endblock %}
-</div>
+{#<div id="left-column" class="col-md-2 left">#}
+{#    {% block left_panel %}#}
+{#    <div class="panel panel-default tree">{% page_menu "pages/menus/tree.html" %}</div>#}
+{#    {% endblock %}#}
+{#</div>#}
 
-<div class="col-md-7 middle">
+<div class="col-md-9 middle">
     {% block main %}{% endblock %}
 </div>
 
-<div class="col-md-3 right">
-    {% nevercache %}
-    {% include "includes/language_selector.html" %}
-    {% include "includes/user_panel.html" %}
-    {% endnevercache %}
+<div id="right-column" class="col-md-3 right">
+{#    {% nevercache %}#}
+{#    {% include "includes/language_selector.html" %}#}
+{#    {% include "includes/user_panel.html" %}#}
+{#    {% endnevercache %}#}
     <div class="panel panel-default">
     <div class="panel-body">
     {% block right_panel %}
-    {% ifinstalled mezzanine.twitter %}
-    {% include "twitter/tweets.html" %}
-    {% endifinstalled %}
+        <a href="https://github.com/canilearntocode"><img src="{% static 'images/Octocat.png' %}" class="img-responsive"></a>
+        <a href="https://github.com/canilearntocode"><h4 class="text-center">GitHub</h4></a>
+{#    {% ifinstalled mezzanine.twitter %}#}
+{#    {% include "twitter/tweets.html" %}#}
+{#    {% endifinstalled %}#}
     {% endblock %}
     </div>
     </div>
