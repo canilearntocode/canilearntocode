@@ -1,0 +1,19 @@
+{% extends "base.html" %}{% load i18n %}
+
+{% block meta_title %}{{ subject }}{% endblock %}
+{% block title %}<h1>{{ subject }}</h1>{% endblock %}
+
+{% block main %}
+<p>{{ subject.description }}</p>
+<h2>Books</h2>
+<hr>
+{% for resource in subject.resource_set.all %}
+    <div class="clearfix">
+        <a href="{{ resource.link }}"><img src="{{ resource.image.url }}" class="img-responsive pull-left"></a>
+        <a href="{{ resource.link }}"><h3>{{ resource.title }}</h3></a>
+        <p>By {{ resource.creators }}</p>
+        <p>{{ resource.description }}</p>
+    </div>
+    <hr>
+{% endfor %}
+{% endblock %}
