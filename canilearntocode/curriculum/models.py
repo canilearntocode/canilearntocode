@@ -1,6 +1,6 @@
 from django.db import models
 
-from .choices import MEDIUM_CHOICES
+from . import choices
 
 
 class Curriculum(models.Model):
@@ -21,11 +21,12 @@ class Resource(models.Model):
     title = models.CharField(max_length=200)
     link = models.URLField()
     creators = models.CharField(max_length=255)
-    medium = models.CharField(max_length=3, choices=MEDIUM_CHOICES)
+    medium = models.CharField(max_length=3, choices=choices.MEDIUM_CHOICES)
     image = models.ImageField(upload_to='curriculum/')
     subjects = models.ManyToManyField(Curriculum)
     description = models.TextField()
 
     def __str__(self):
         return self.title
+
 

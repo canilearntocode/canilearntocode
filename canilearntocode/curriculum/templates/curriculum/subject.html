@@ -5,17 +5,25 @@
 
 {% block main %}
 <p>{{ subject.description }}</p>
-<h2>Books</h2>
-<hr>
-{% for resource in subject.resource_set.all %}
-    <div class="clearfix">
-        <a href="{{ resource.link }}">
-            <img src="{{ resource.image.url }}" class="img-responsive pull-left curriculum-img" width="250">
-        </a>
-        <a href="{{ resource.link }}"><h3>{{ resource.title }}</h3></a>
-        <p>By {{ resource.creators }}</p>
-        <p>{{ resource.description }}</p>
-    </div>
-    <hr>
+{% for medium in mediums %}
+    {% if medium %}
+        {% for resource in subject.resource_set.all %}
+        {% if forloop.counter == 1 %}
+        <h2>{{ resource.get_medium_display }}</h2>
+        <hr>
+        {% endif %}
+            <div class="clearfix">
+                <a href="{{ resource.link }}">
+                    <img src="{{ resource.image.url }}" class="img-responsive pull-left curriculum-img" width="250">
+                </a>
+                <a href="{{ resource.link }}"><h3>{{ resource.title }}</h3></a>
+                <p>By {{ resource.creators }}</p>
+                <p>{{ resource.description }}</p>
+            </div>
+            <hr>
+        {% endfor %}
+    {% endif %}
 {% endfor %}
+
+
 {% endblock %}

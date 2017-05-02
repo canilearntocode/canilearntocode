@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_list_or_404, get_object_or_404
 
-from .models import Curriculum
+from .models import Curriculum, Resource
+from . import choices
 
 
 def curriculum(request):
@@ -11,5 +12,12 @@ def curriculum(request):
 
 def subject(request, slug):
     subject = get_object_or_404(Curriculum, slug=slug)
-    context = {'subject': subject}
+    courses = subject.resource_set.filter(medium=choices.COURSE)
+    books = subject.resource_set.filter(medium=choices.BOOK)
+    videos = subject.resource_set.filter(medium=choices.VIDEO)
+    lectures = subject.resource_set.filter(medium=choices.LECTURE)
+    context = {
+        'subject': subject,
+        'mediums': (courses, books, videos, lectures),
+    }
     return render(request, template_name='curriculum/subject.html', context=context)
