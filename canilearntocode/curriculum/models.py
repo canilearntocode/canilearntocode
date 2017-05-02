@@ -7,8 +7,10 @@ class Curriculum(models.Model):
     subject = models.CharField(max_length=100)
     slug = models.SlugField()
     description = models.TextField()
+    display_order = models.IntegerField(default=1)
 
     class Meta:
+        ordering = ['display_order']
         verbose_name_plural = 'Curriculum'
 
     def __str__(self):
