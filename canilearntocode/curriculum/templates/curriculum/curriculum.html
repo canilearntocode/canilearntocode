@@ -1,9 +1,12 @@
-{% extends "base.html" %}{% load i18n %}
+{% extends "base.html" %}{% load i18n mezzanine_tags %}
 
 {% block meta_title %}{% trans "Curriculum" %}{% endblock %}
 {% block title %}<h1>Curriculum</h1>{% endblock %}
 
 {% block main %}
+{% editable page.richtextpage.content %}
+{{ page.richtextpage.content|richtext_filters|safe }}
+{% endeditable %}
 {% for subject in curriculum %}
     <a href="{% url 'subject' subject.slug %}"><h2>{{ subject }}</h2></a>
     <p>{{ subject.description }}</p>
