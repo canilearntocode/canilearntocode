@@ -38,6 +38,7 @@
 <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
 <script src="{% static "js/bootstrap.js" %}"></script>
 <script src="{% static "js/bootstrap-extras.js" %}"></script>
+<script src="https://use.fontawesome.com/409404672b.js"></script>
 {% block extra_js %}{% endblock %}
 {% endcompress %}
 
@@ -119,8 +120,7 @@
 {#    {% include "includes/user_panel.html" %}#}
 {#    {% endnevercache %}#}
     {% block right_panel %}
-    <h4>Fork me on:</h4>
-    <div class="panel panel-default">
+    <div class="panel panel-default github-panel">
         <div class="panel-body">
             <a href="https://github.com/canilearntocode"><img src="{% static 'images/icons/Octocat.png' %}" class="img-responsive"></a>
             <a href="https://github.com/canilearntocode"><h4 class="text-center">GitHub</h4></a>
@@ -130,6 +130,10 @@
         </div>
     </div>
     {% endblock %}
+    <i class="fa fa-twitter fa-3x social-icon" aria-hidden="true"></i>
+    <i class="fa fa-facebook fa-3x social-icon" aria-hidden="true"></i>
+    <i class="fa fa-medium fa-3x social-icon" aria-hidden="true"></i>
+    <i class="fa fa-rss fa-3x social-icon" aria-hidden="true"></i>
 </div>
 
 </div>

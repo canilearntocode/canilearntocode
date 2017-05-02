@@ -92,3 +92,19 @@ hr {
     height: 1px;
     background: #ccc;
 }
+
+/* Image customizations */
+
+.curriculum-img {
+    margin-right: 20px !important;
+}
+
+/* Icon customization */
+
+.social-icon {
+    margin-right: 28px;
+}
+
+.github-panel {
+    margin-top: 20px;
+}
