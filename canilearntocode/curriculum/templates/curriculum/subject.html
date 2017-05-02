@@ -7,7 +7,7 @@
 <p>{{ subject.description }}</p>
 {% for medium in mediums %}
     {% if medium %}
-        {% for resource in subject.resource_set.all %}
+        {% for resource in medium %}
         {% if forloop.counter == 1 %}
         <h2>{{ resource.get_medium_display }}</h2>
         <hr>
