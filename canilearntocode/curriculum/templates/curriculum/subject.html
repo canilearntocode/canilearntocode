@@ -20,7 +20,7 @@
                 <p>By {{ resource.creators }}</p>
                 <p>{{ resource.description }}</p>
             </div>
-            <hr>
+            {% if not forloop.last %}<hr>{% endif %}
         {% endfor %}
     {% endif %}
 {% endfor %}
