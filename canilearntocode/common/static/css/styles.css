@@ -76,15 +76,6 @@ body {
     background-repeat: no-repeat;
     text-decoration: underline;
 }
-/* Sidebar customizations */
-
-#left-column {
-    padding-top: 20px;
-}
-
-#right-column {
-    padding-top: 20px;
-}
 
 /* Breadcrumb customizations */
 

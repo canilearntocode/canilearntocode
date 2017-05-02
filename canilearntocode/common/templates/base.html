@@ -118,17 +118,18 @@
 {#    {% include "includes/language_selector.html" %}#}
 {#    {% include "includes/user_panel.html" %}#}
 {#    {% endnevercache %}#}
-    <div class="panel panel-default">
-    <div class="panel-body">
     {% block right_panel %}
-        <a href="https://github.com/canilearntocode"><img src="{% static 'images/icons/Octocat.png' %}" class="img-responsive"></a>
-        <a href="https://github.com/canilearntocode"><h4 class="text-center">GitHub</h4></a>
-{#    {% ifinstalled mezzanine.twitter %}#}
-{#    {% include "twitter/tweets.html" %}#}
-{#    {% endifinstalled %}#}
+    <h4>Fork me on:</h4>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <a href="https://github.com/canilearntocode"><img src="{% static 'images/icons/Octocat.png' %}" class="img-responsive"></a>
+            <a href="https://github.com/canilearntocode"><h4 class="text-center">GitHub</h4></a>
+            {#    {% ifinstalled mezzanine.twitter %}#}
+            {#    {% include "twitter/tweets.html" %}#}
+            {#    {% endifinstalled %}#}
+        </div>
+    </div>
     {% endblock %}
-    </div>
-    </div>
 </div>
 
 </div>
