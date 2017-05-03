@@ -16,8 +16,9 @@ def subject(request, slug):
     books = subject.resource_set.filter(medium=choices.BOOK)
     videos = subject.resource_set.filter(medium=choices.VIDEO)
     lectures = subject.resource_set.filter(medium=choices.LECTURE)
+    online_resources = subject.resource_set.filter(medium=choices.ONLINE)
     context = {
         'subject': subject,
-        'mediums': (courses, books, videos, lectures),
+        'mediums': (courses, online_resources, videos, lectures, books),
     }
     return render(request, template_name='curriculum/subject.html', context=context)
