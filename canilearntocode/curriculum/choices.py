@@ -5,7 +5,7 @@ LECTURE = 'LCT'
 ONLINE = 'WEB'
 MEDIUM_CHOICES = (
     (BOOK, 'Books'),
-    (COURSE, 'Courses'),
+    (COURSE, 'Interactive Courses'),
     (VIDEO, 'Videos'),
     (LECTURE, 'Lectures'),
     (ONLINE, 'Online Resources'),
