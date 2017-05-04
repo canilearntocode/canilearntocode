@@ -1,4 +1,0 @@
-# Install base requirements
---requirement=requirements.txt
-
-mysqlclient==1.3.10
