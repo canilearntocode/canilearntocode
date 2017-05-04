@@ -4,9 +4,9 @@ VIDEO = 'VID'
 LECTURE = 'LCT'
 ONLINE = 'WEB'
 MEDIUM_CHOICES = (
-    (BOOK, 'Books'),
-    (COURSE, 'Interactive Courses'),
-    (VIDEO, 'Videos'),
-    (LECTURE, 'Lectures'),
-    (ONLINE, 'Online Resources'),
+    (BOOK, 'Book'),
+    (COURSE, 'Interactive Course'),
+    (VIDEO, 'Video'),
+    (LECTURE, 'Lecture'),
+    (ONLINE, 'Online Resource'),
 )

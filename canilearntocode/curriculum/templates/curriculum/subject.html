@@ -4,26 +4,11 @@
 {% block title %}<h1>{{ subject }}</h1>{% endblock %}
 
 {% block main %}
-<p>{{ subject.description }}</p>
-{% for medium in mediums %}
-    {% if medium %}
-        {% for resource in medium %}
-        {% if forloop.counter == 1 %}
-        <h2>{{ resource.get_medium_display }}</h2>
-        <hr>
-        {% endif %}
-            <div class="clearfix">
-                <a href="{{ resource.link }}">
-                    <img src="{{ resource.image.url }}" class="img-responsive pull-left curriculum-img" width="250">
-                </a>
-                <a href="{{ resource.link }}"><h3>{{ resource.title }}</h3></a>
-                <p>By {{ resource.creators }}</p>
-                <p>{{ resource.description }}</p>
-            </div>
-            {% if not forloop.last %}<hr>{% endif %}
-        {% endfor %}
-    {% endif %}
-{% endfor %}
-
-
+    <p>{{ subject.description }}</p>
+    <h2>Recommended:</h2>
+    <hr>
+    {% include 'curriculum/includes/_resource.html' with resources=recommended_resources %}
+    <h2>Additional Resources:</h2>
+    <hr>
+    {% include 'curriculum/includes/_resource.html' with resources=additional_resources %}
 {% endblock %}
