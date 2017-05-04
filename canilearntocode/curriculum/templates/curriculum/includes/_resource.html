@@ -1,13 +1,17 @@
 {% for resource in resources %}
     {% if resource %}
-    <div class="clearfix">
-        <span class="label label-primary">{{ resource.get_medium_display }}</span>
-        <a href="{{ resource.link }}">
-            <img src="{{ resource.image.url }}" class="img-responsive pull-left curriculum-img" width="250">
-        </a>
-        <a href="{{ resource.link }}"><h4>{{ resource.title }}</h4></a>
-        <p>By {{ resource.creators }}</p>
-        <p>{{ resource.description }}</p>
+    <div class="row">
+        <div class="col-md-4"
+            <a href="{{ resource.link }}">
+                <img src="{{ resource.image.url }}" class="img-responsive curriculum-img">
+            </a>
+        </div>
+        <div class="col-md-8">
+            <span class="label label-primary">{{ resource.get_medium_display }}</span>
+            <a href="{{ resource.link }}"><h4>{{ resource.title }}</h4></a>
+            <p>By {{ resource.creators }}</p>
+            <p>{{ resource.description }}</p>
+        </div>
     </div>
     {% if not forloop.last %}<hr>{% endif %}
     {% endif %}
