@@ -25,6 +25,7 @@ class Resource(models.Model):
     image = models.ImageField(upload_to='curriculum/')
     subjects = models.ManyToManyField(Curriculum)
     description = models.TextField()
+    recommended = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
