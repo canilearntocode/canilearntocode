@@ -26,6 +26,7 @@ class Resource(models.Model):
     subjects = models.ManyToManyField(Curriculum)
     description = models.TextField()
     recommended = models.BooleanField(default=False)
+    description_citation = models.URLField(blank=True)
 
     def __str__(self):
         return self.title
