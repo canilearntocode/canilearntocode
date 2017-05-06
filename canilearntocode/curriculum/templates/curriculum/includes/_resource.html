@@ -11,10 +11,8 @@
             <a href="{{ resource.link }}" target="_blank"><h4>{{ resource.title }}</h4></a>
             <p>By {{ resource.creators }}</p>
             <p>{{ resource.description }}</p>
-            {% if resource.desctiption_citation and resource.citaiton_url %}
-                <a href="{{ resource.citation_url }}" target="_blank">
-                    <p>{{ resource.description_citation }}</p>
-                </a>
+            {% if resource.description_citation and resource.citation_url %}
+                <p>Read more on: <a href="{{ resource.citation_url }}" target="_blank">{{ resource.description_citation }}</a></p>
             {% endif %}
         </div>
     </div>
