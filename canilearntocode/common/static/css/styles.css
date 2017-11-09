@@ -13,48 +13,46 @@ body {
     padding-top: 80px;
 }
 
+.navbar-inverse .navbar-nav > li > a {
+    color: #4e4e4e;
+}
+
 .navbar-inverse {
-    background-color: rgb(113, 178, 226);
+    background-color: #99caef;
     background-image: none;
     background-repeat: no-repeat;
     border-color: #ccc;
 }
 
-.navbar-inverse .navbar-nav > li > a {
-    color: white;
-}
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-    color: white;
-    text-decoration: underline;
+    color: #428bca;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
     box-shadow: none;
-    color: white;
+    color: #428bca;
     background-color: transparent !important;
     background-image: none;
     background-repeat: no-repeat;
-    text-decoration: underline;
 }
 
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
     box-shadow: none;
-    color: white;
+    color: #428bca;
     background-color: transparent !important;
     background-image: none;
     background-repeat: no-repeat;
-    text-decoration: underline;
 }
 
 .navbar-inverse .navbar-nav > .dropdown > a,
 .navbar-inverse .navbar-nav > .dropdown > a:hover,
 .navbar-inverse .navbar-nav > .dropdown > a:focus {
     box-shadow: none;
-    color: white;
+    color: #428bca;
     background-color: transparent !important;
     background-image: none;
     background-repeat: no-repeat;
@@ -74,7 +72,23 @@ body {
     background-color: transparent !important;
     background-image: none;
     background-repeat: no-repeat;
-    text-decoration: underline;
+}
+
+.navbar-brand {
+    height: 140px;
+}
+
+@media(min-width: 768px) {
+    .navbar-collapse {
+        padding-top: 80px;
+    }
+    .navbar-right {
+        margin-top: -60px;
+    }
+}
+
+.custom-nav-text {
+    color: #4e4e4e;
 }
 
 /* Breadcrumb customizations */
