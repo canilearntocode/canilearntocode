@@ -77,6 +77,9 @@ from django.utils.translation import ugettext_lazy as _
 #     ),
 # )
 
+# For blog as home page
+BLOG_SLUG = ""
+
 # Setting to turn on featured images for blog posts. Defaults to False.
 
 BLOG_USE_FEATURED_IMAGE = True
