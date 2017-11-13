@@ -1,6 +1,8 @@
 {% load blog_tags keyword_tags mezzanine_tags i18n static %}
 <h4><img src="{% static 'images/icons/computer_icon.png' %}" height="50px"> Can I Learn to Code?</h4>
-<p>Programming tutorials for people from non-technical backgrounds by a programmer from a non-technical background.</p>
+<p>Programming tutorials and learning resources for people from non-technical backgrounds by a carpenter turned web developer.</p>
+<p><a href="#">Learn more</a></p>
+
 {% block blog_recent_posts %}
 {% blog_recent_posts 5 as recent_posts %}
 {% if recent_posts %}
