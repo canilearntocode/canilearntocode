@@ -10,68 +10,18 @@ p, div {
 /* Navbar customizations */
 
 body {
-    padding-top: 180px;
+    padding-top: 200px;
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    color: #4e4e4e;
+    color: #000204;
 }
 
 .navbar-inverse {
-    background-color: #F8F8F8;
+    background-color: #71b2e2;
     background-image: none;
     background-repeat: no-repeat;
     border-color: #E7E7E7;
-}
-
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus {
-    color: #428bca;
-}
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
-    box-shadow: none;
-    color: #428bca;
-    background-color: transparent !important;
-    background-image: none;
-    background-repeat: no-repeat;
-}
-
-.navbar-inverse .navbar-nav > .open > a,
-.navbar-inverse .navbar-nav > .open > a:hover,
-.navbar-inverse .navbar-nav > .open > a:focus {
-    box-shadow: none;
-    color: #428bca;
-    background-color: transparent !important;
-    background-image: none;
-    background-repeat: no-repeat;
-}
-
-.navbar-inverse .navbar-nav > .dropdown > a,
-.navbar-inverse .navbar-nav > .dropdown > a:hover,
-.navbar-inverse .navbar-nav > .dropdown > a:focus {
-    box-shadow: none;
-    color: #428bca;
-    background-color: transparent !important;
-    background-image: none;
-    background-repeat: no-repeat;
-}
-
-.dropdown-menu {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-}
-
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus {
-    box-shadow: none;
-    color: #333;
-    background-color: transparent !important;
-    background-image: none;
-    background-repeat: no-repeat;
 }
 
 .navbar-brand {
@@ -86,15 +36,23 @@ body {
     background-color: #4e4e4e;
 }
 
-/* Breadcrumb customizations */
-
-.breadcrumb {
-    background-color: rgba(221, 221, 221, 0.6);
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+/* Sub nav */
+.sub-navbar {
+    margin-top: 140px;
 }
+@media (min-width: 768px) {
+    .sub-navbar {
+        margin-left: -20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .sub-nav-collapse {
+        padding-left: 0;
+    }
+}
+
+/* Breadcrumb customizations */
 
 hr {
     border: 0;
@@ -102,15 +60,17 @@ hr {
     background: #ccc;
 }
 
-/* Image customizations */
-
-.curriculum-img {
-    margin-right: 20px !important;
-    margin-bottom: 20px;
-}
-
 /* Icon customization */
 
+.social-icons {
+    padding-top: 20px;
+}
+
 .social-icon {
+    color: #4e4e4e;
     margin-right: 40px;
+}
+
+.social-icon:hover {
+    color: white;
 }

@@ -14,6 +14,7 @@
 
 {% block title %}
 {% editable blog_post.title %}{{ blog_post.title }}{% endeditable %}
+<hr>
 {% endblock %}
 
 {% block breadcrumb_menu %}
@@ -52,7 +53,7 @@
 
 {% block blog_post_detail_featured_image %}
 {% if settings.BLOG_USE_FEATURED_IMAGE and blog_post.featured_image %}
-<p><img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 600 0 %}"></p>
+<p><img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail blog_post.featured_image 1000 400 %}"></p>
 {% endif %}
 {% endblock %}
 
