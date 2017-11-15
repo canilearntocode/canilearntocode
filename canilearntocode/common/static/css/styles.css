@@ -36,6 +36,10 @@ body {
     background-color: #4e4e4e;
 }
 
+.search-form {
+    margin-right: 0 !important;
+}
+
 /* Sub nav */
 .sub-navbar {
     margin-top: 140px;
