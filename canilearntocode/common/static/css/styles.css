@@ -78,3 +78,8 @@ hr {
 .social-icon:hover {
     color: #71b2e2;
 }
+
+/* Right panel */
+#logo-text {
+    padding-left: 10px;
+}
