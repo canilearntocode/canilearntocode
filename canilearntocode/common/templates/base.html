@@ -125,6 +125,11 @@
     <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
     {% endifinstalled %}
 </p>
+<br>
+<p class="text-center">
+    <a href="https://github.com/canilearntocode/canilearntocode"><i class="fa fa-github fa-2x social-icon" aria-hidden="true"></i></a>
+    <a href="{% url "blog_post_feed" "rss" %}"><i class="fa fa-rss fa-2x social-icon" aria-hidden="true"></i></a>
+</p>
 </div>
 </div>
 </footer>
