@@ -37,33 +37,32 @@ body {
 }
 
 .search-form {
+    border: 0 !important;
+    box-shadow: none;
     margin-right: 0 !important;
 }
 
 /* Sub nav */
 .sub-navbar {
-    margin-top: 140px;
+    margin-top: 190px;
     background-image: none;
     background-color: #428bca;
 }
 
 .subnav-menu > li > a {
-    color: #d9edf7 !important;
+    color: #ffffff !important;
+    text-shadow: none !important;
 }
 
 .subnav-menu > li > a:hover {
-    color: white !important;
+    color: #d9edf7 !important;
+    text-shadow: none !important;
 }
 
 @media (min-width: 768px) {
     .sub-navbar {
         margin-left: -20px;
-    }
-}
-
-@media (min-width: 992px) {
-    .sub-nav-collapse {
-        padding-left: 0;
+        margin-top: 140px;
     }
 }
 
